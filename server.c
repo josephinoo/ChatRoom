@@ -181,7 +181,7 @@ int main(int argc, char **argv){
 	signal(SIGPIPE, SIG_IGN);
 
 	if(setsockopt(listenfd, SOL_SOCKET,(SO_REUSEPORT | SO_REUSEADDR),(char*)&option,sizeof(option)) < 0){
-		perror("ERROR: setsockopt failed");
+		perror("[-]ERROR: setsockopt failed");
     return EXIT_FAILURE;
 	}
 
